@@ -1,0 +1,20 @@
+compatibility_date = "2025-04-22"
+main = "workers-site/index.js"
+
+assets = { directory = "./dist", binding = "ASSETS", run_worker_first = true, html_handling = "force-trailing-slash", not_found_handling = "single-page-application" }
+
+[[kv_namespaces]]
+binding = "anurabyanjana"
+id = "76fe2f25ae4a4e48bd972562268be616"
+
+
+[observability.logs]
+enabled = true
+
+
+[env.prod]
+vars = { BACKEND_URL = "https://dev.seedlingsocial.org"}
+name = "anurabyanjana_dev"
+kv_namespaces = [
+  { binding = "anurabyanjana", id = "76fe2f25ae4a4e48bd972562268be616" }
+]
